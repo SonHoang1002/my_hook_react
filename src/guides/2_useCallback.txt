@@ -1,0 +1,7 @@
+
+- Dùng để cache 1 hàm khi component được re-render 
+
+const cachedFn = useCallback(fn, dependencies);
+
+- fn: Hàm bên trong component
+- dependencies: Quyết định xem khi nào thì sẽ cache lại

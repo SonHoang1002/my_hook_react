@@ -1,0 +1,37 @@
+
+
+useActionState
+
+1: Cách dùng
+
+ - Gắn submit handler vào form ui 
+ - Tự động quản lý trạng thái loading/ pending mà không cần
+  phải thêm 1 state để quản lý
+ - Xử lý form bất đồng bộ mà không cần phải tạo hành động 
+  onSubmit
+
+2: Cú pháp
+
+const [state, formAction, isPending] = useActionState(
+  (previousState, formData) => newState | Promise<data>,
+  initialState
+);
+
+state                                                   : Trạng thái dữ liệu hiện tại của form 
+formAction                                              : Gắn với 'action' của form, ví dụ: <form action="formAction">....</form>
+isPending                                               : Trạng thái xử lý của form 
+(previousState, formData) => newState | Promise<data>   : Hàm này để xử lý data truyền vào, trả ra data mới, update result vào state hiện 
+initialState                                            : Trạng thái dữ liệu ban đầu của form
+
+
+
+
+
+
+
+
+
+
+
+
+
